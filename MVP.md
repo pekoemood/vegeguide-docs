@@ -7,7 +7,7 @@ MVPでは、「旬・安価・栄養価の高い野菜」を起点に、時短�
 VegeGuide（ベジガイド）
 
 **サービスURL：**  
-https://vegeguide.example.com （※仮のURLです。適宜修正してください）
+
 
 ---
 
@@ -15,15 +15,41 @@ https://vegeguide.example.com （※仮のURLです。適宜修正してくだ�
 - [ ] ユーザー登録機能（JWT + Cookieベース）
 - [ ] ログイン・ログアウト機能
 - [ ] 野菜一覧表示（旬・価格・栄養価で並び替え可能）
-- [ ] 野菜詳細表示（基本情報＋レシピリンク）
+- [ ] 野菜詳細表示（基本情報＋レシピ生成）
 - [ ] レシピ表示機能（レシピ一覧・詳細）
 - [ ] 買い物リスト自動生成機能（レシピから）
 - [ ] 買い物リストのチェック機能
-- [ ] デプロイ（HerokuまたはRender）
+- [ ] デプロイ（Vercel, Render）
 - [ ] Sidekiqによる価格情報の定期更新
 
 ---
 
 ## READMEレビュー時から変更した機能
-- 【追加】価格情報取得をスクレイピングからダミーデータ保存に一時的に変更（本番用API整備までの暫定対応）
-- 【削除】レシピ投稿機能（初期MVPでは固定レシピのみ使用としたため）
+- **価格情報の定期更新（Sidekiq）**：サーバー運用コストの観点から保留。本リリースの際に実装予定。
+- **価格・栄養素による並び替え**：データ量が増えてからの実装を予定。現時点では簡易表示のみ。
+
+## サービスイメージがわかるようなスクリーンショット等
+
+### トップページ
+[![Image from Gyazo](https://i.gyazo.com/032d1cfd581d1a80715639b967a738e9.png)](https://gyazo.com/032d1cfd581d1a80715639b967a738e9)
+
+### 野菜一覧画面
+[![Image from Gyazo](https://i.gyazo.com/bbcefb674e8d2851dabf38d2eef87350.jpg)](https://gyazo.com/bbcefb674e8d2851dabf38d2eef87350)
+
+### 野菜詳細画面
+[![Image from Gyazo](https://i.gyazo.com/ba07f83b9090c03dcd98f68c3b4adf20.png)](https://gyazo.com/ba07f83b9090c03dcd98f68c3b4adf20)
+
+### 野菜レシピ生成画面
+[![Image from Gyazo](https://i.gyazo.com/5324a9b04447ab04239f817b93092dbb.png)](https://gyazo.com/5324a9b04447ab04239f817b93092dbb)
+
+### 買い物リスト画面
+[![Image from Gyazo](https://i.gyazo.com/9789b11e9cb4ee40532202dfd1a37bd9.png)](https://gyazo.com/9789b11e9cb4ee40532202dfd1a37bd9)
+
+### 買い物リスト詳細画面
+[![Image from Gyazo](https://i.gyazo.com/a7a5ab734d629cef94d0b5cc0d4826a9.png)](https://gyazo.com/a7a5ab734d629cef94d0b5cc0d4826a9)
+
+### 登録レシピ一覧画面
+[![Image from Gyazo](https://i.gyazo.com/57a9d4be0d6a3ea4d29b1bae1439e9eb.png)](https://gyazo.com/57a9d4be0d6a3ea4d29b1bae1439e9eb)
+
+### 登録レシピ詳細画面
+[![Image from Gyazo](https://i.gyazo.com/c53a3e266e9980a705b2c297072b27bf.png)](https://gyazo.com/c53a3e266e9980a705b2c297072b27bf)
